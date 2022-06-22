@@ -7,7 +7,6 @@ export default function BeanieDetail() {
   const params = useParams();
   // you'll need to track the current beanieBaby in state
   // you'll need to get the route param using the appropriate react router hook
- 
   useEffect(() => {
     
     async function getBeanieData() {
@@ -22,6 +21,7 @@ export default function BeanieDetail() {
   }, [params.id]); // note that you'll want the id from the url in the dependency array because you want the useEffect callback to get called every time the url changes 
 
   function handleBeanieClick() {
+    window.open(beanieBaby.link, '_blank');
     // here's a challenge. How can you link on click to the beanie baby's correct entry in the official beanie baby fan site?
   }
 

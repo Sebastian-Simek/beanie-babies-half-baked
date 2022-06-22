@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function BeanieBaby({ beanieBaby }) {
+  console.log(beanieBaby);
   return (
     <Link to={`/BeanieDetail/${beanieBaby.id}`}>
       <div className='beanie-detail'>
