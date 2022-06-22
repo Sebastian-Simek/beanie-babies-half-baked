@@ -4,5 +4,6 @@ export default function BeaniesList({ beanieBabies }) {
   return (
     <div className='beanies'>
       {/* render out the beanie babies as a list */}
+      Hello from beaniesList
     </div>);
 }

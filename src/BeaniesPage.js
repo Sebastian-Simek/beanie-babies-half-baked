@@ -12,13 +12,13 @@ function App() {
     async function fetch() {
       const from = page * perPage - perPage;
       const to = page * perPage;
-      const beanies = await getBeanieBabies(from, to);
+      const data = await getBeanieBabies(from, to);
 
-      setBeanieBabies(beanies);
+      setBeanieBabies(data);
     }
 
     fetch();
-  }, []); // what can you do with this array to trigger a fetch every time the page changes?
+  }, [page]); // what can you do with this array to trigger a fetch every time the page changes?
 
   return (
     <>
@@ -31,6 +31,7 @@ function App() {
         <button >Next Page</button>
       </div>
       {/* pass the beanie babies into the BeaniesList component */}
+      <BeaniesList beanieBabies={beanieBabies}/>
     </>
   );
 }
